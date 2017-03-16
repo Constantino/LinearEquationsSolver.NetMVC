@@ -1,0 +1,50 @@
+﻿@model MVCLinearSystem.Models.LinearSystemModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form method="post">
+    <fieldset>
+        <legend>Linear equations solver</legend>
+        <div>
+            @Html.TextBoxFor(m => m.x1, new { @type = "number", @step = "0.01", @size = "6" })
+            <label for="x">x</label>
+            @Html.TextBoxFor(m => m.y1, new { @type = "number", @step = "0.01", @size = "6" })
+            <label for="x">y</label>
+            @Html.TextBoxFor(m => m.z1, new { @type = "number", @step = "0.01", @size = "6" })
+            <label for="x">z</label>
+            <label for="result"> = </label>
+            @Html.TextBoxFor(m => m.result1, new { @type = "number", @step = "0.01", @size = "6" })
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.x2, new { @type = "number", @step = "0.01", @size = "6" })
+            <label for="x">x</label>
+            @Html.TextBoxFor(m => m.y2, new { @type = "number", @step = "0.01", @size = "6" })
+            <label for="x">y</label>
+            @Html.TextBoxFor(m => m.z2, new { @type = "number", @step = "0.01", @size = "6" })
+            <label for="x">z</label>
+            <label for="result"> = </label>
+            @Html.TextBoxFor(m => m.result2, new { @type = "number", @step = "0.01", @size = "6" })
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.x3, new { @type = "number", @step = "0.01", @size = "6" })
+            <label for="x">x</label>
+            @Html.TextBoxFor(m => m.y3, new { @type = "number", @step = "0.01", @size = "6" })
+            <label for="x">y</label>
+            @Html.TextBoxFor(m => m.z3, new { @type = "number", @step = "0.01", @size = "6" })
+            <label for="x">z</label>
+            <label for="result"> = </label>
+            @Html.TextBoxFor(m => m.result3, new { @type = "number", @step = "0.01", @size = "6" })
+        </div>
+        <input type="submit" class="btn btn-success" value="Solve!" />
+    </fieldset>
+
+</form>
+
+<div>
+    Result: x = @Html.DisplayFor(m => m.x), y = @Html.DisplayFor(m => m.y), z = @Html.DisplayFor(m => m.z)
+
+</div>
